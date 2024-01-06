@@ -99,7 +99,7 @@ class LoginSignupPageState extends State<LoginSignupPage> {
               width: 300,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
@@ -268,6 +268,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Chat App Home'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              // Handle search action
+              // You can implement search functionality here
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -283,7 +292,11 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                // Add logic for actions on the home page
+                // Navigate to Your Contacts page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => YourContactsPage()),
+                );
               },
               child: const Text('Start Chatting'),
             ),
@@ -301,6 +314,32 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class YourContactsPage extends StatelessWidget {
+  const YourContactsPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Your Contacts'),
+      ),
+      body: ListView(
+        children: [
+          ListTile(
+            title: const Text('Friend 1'),
+            // Add onPressed logic to open chat with Friend 1
+          ),
+          ListTile(
+            title: const Text('Friend 2'),
+            // Add onPressed logic to open chat with Friend 2
+          ),
+          // Add more ListTile widgets for other contacts
+        ],
       ),
     );
   }

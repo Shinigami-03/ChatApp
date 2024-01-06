@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638403658398",
+    "project_id": "chatapp-aa11",
+    "storage_bucket": "chatapp-aa11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638403658398:android:eda4c0af3f71c19d1af18f",
+        "android_client_info": {
+          "package_name": "com.Ragnarok.Chatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrukFdX32J8-lRuPQQ_w7hrAlBC8Lh-e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
